@@ -431,8 +431,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r7w-a5-cVu"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6RP-ok-bvB"/>
+                    <navigationItem key="navigationItem" id="6RP-ok-bvB">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="U0V-TE-Jzp"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="navBar" destination="6RP-ok-bvB" id="dNS-CM-Sc3"/>
                         <outlet property="rewardDescriptionTxt" destination="AOB-HR-pUz" id="0BO-rj-tf3"/>
                         <outlet property="rewardImage" destination="3zj-O5-Iho" id="D9A-D4-GHd"/>
                         <outlet property="rewardNameTxt" destination="D9K-ng-sl6" id="F1P-dT-RWG"/>

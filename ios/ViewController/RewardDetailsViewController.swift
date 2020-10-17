@@ -9,6 +9,7 @@
 import UIKit
 
 class RewardDetailsViewController: UIViewController {
+    @IBOutlet weak var navBar: UINavigationItem!
     @IBOutlet weak var rewardImage: UIImageView!
     @IBOutlet weak var rewardNameTxt: UILabel!
     @IBOutlet weak var rewardDescriptionTxt: UILabel!
@@ -18,7 +19,27 @@ class RewardDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        showRewardDetails()
+        self.showRewardDetails()
+        self.setupShareButton()
+    }
+    
+    private func setupShareButton() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(shareBtnAction))
+    }
+    
+    @objc private func shareBtnAction() {
+        guard let image = rewardImage.image else {
+            Prompt.show(controller: self, message: "Failed to share")
+            return
+        }
+
+        let imageToShare = [ image ]
+        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+
+        activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook ]
+
+        self.present(activityViewController, animated: true, completion: nil)
     }
     
     private func showRewardDetails() {
