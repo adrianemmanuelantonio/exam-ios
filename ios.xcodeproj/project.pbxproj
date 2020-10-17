@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		648B21D779E4C730CB0B9CE1 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 872E1090909B87AFD8716891 /* Pods_ios.framework */; };
+		E6372AAD253B19AF0092CEE9 /* RewardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6372AAB253B19AF0092CEE9 /* RewardCell.swift */; };
+		E6372AAE253B19AF0092CEE9 /* RewardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6372AAC253B19AF0092CEE9 /* RewardCell.xib */; };
+		E6372AB0253B1BB90092CEE9 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6372AAF253B1BB90092CEE9 /* DashboardViewModel.swift */; };
+		E6372AB2253B1D950092CEE9 /* RewardsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6372AB1253B1D950092CEE9 /* RewardsApiService.swift */; };
+		E6372AB4253B1E6F0092CEE9 /* RewardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6372AB3253B1E6F0092CEE9 /* RewardsModel.swift */; };
+		E6372AB6253B1F930092CEE9 /* rewards.json in Resources */ = {isa = PBXBuildFile; fileRef = E6372AB5253B1F930092CEE9 /* rewards.json */; };
+		E6372AB8253B25730092CEE9 /* ImageView+Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6372AB7253B25730092CEE9 /* ImageView+Downloader.swift */; };
 		E6BA276A253AC86400502F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA2769253AC86400502F55 /* AppDelegate.swift */; };
 		E6BA2771253AC86400502F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6BA276F253AC86400502F55 /* Main.storyboard */; };
 		E6BA2773253AC86500502F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6BA2772253AC86500502F55 /* Assets.xcassets */; };
@@ -17,7 +24,7 @@
 		E6BA2786253ADB1000502F55 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA2785253ADB1000502F55 /* LoginViewController.swift */; };
 		E6BA2788253ADB2300502F55 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA2787253ADB2300502F55 /* RegisterViewController.swift */; };
 		E6BA278A253ADCD400502F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA2789253ADCD400502F55 /* Constants.swift */; };
-		E6BA278C253ADD9300502F55 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA278B253ADD9300502F55 /* HomeViewController.swift */; };
+		E6BA278C253ADD9300502F55 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA278B253ADD9300502F55 /* DashboardViewController.swift */; };
 		E6BA2791253AE64A00502F55 /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA2790253AE64A00502F55 /* String+Validations.swift */; };
 		E6F7E11D253AF1C20019E405 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F7E11C253AF1C20019E405 /* Prompt.swift */; };
 		E6F7E120253AF4350019E405 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F7E11F253AF4350019E405 /* AccountViewModel.swift */; };
@@ -31,6 +38,13 @@
 		410E946B076F78038276886D /* Pods-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.debug.xcconfig"; path = "Target Support Files/Pods-ios/Pods-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		872E1090909B87AFD8716891 /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4E24FDDF3581F4CF6887499 /* Pods-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios.release.xcconfig"; path = "Target Support Files/Pods-ios/Pods-ios.release.xcconfig"; sourceTree = "<group>"; };
+		E6372AAB253B19AF0092CEE9 /* RewardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardCell.swift; sourceTree = "<group>"; };
+		E6372AAC253B19AF0092CEE9 /* RewardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RewardCell.xib; sourceTree = "<group>"; };
+		E6372AAF253B1BB90092CEE9 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		E6372AB1253B1D950092CEE9 /* RewardsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsApiService.swift; sourceTree = "<group>"; };
+		E6372AB3253B1E6F0092CEE9 /* RewardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsModel.swift; sourceTree = "<group>"; };
+		E6372AB5253B1F930092CEE9 /* rewards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rewards.json; sourceTree = "<group>"; };
+		E6372AB7253B25730092CEE9 /* ImageView+Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Downloader.swift"; sourceTree = "<group>"; };
 		E6BA2766253AC86400502F55 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BA2769253AC86400502F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6BA2770253AC86400502F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,7 +56,7 @@
 		E6BA2785253ADB1000502F55 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E6BA2787253ADB2300502F55 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E6BA2789253ADCD400502F55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E6BA278B253ADD9300502F55 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E6BA278B253ADD9300502F55 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		E6BA2790253AE64A00502F55 /* String+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
 		E6F7E11C253AF1C20019E405 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		E6F7E11F253AF4350019E405 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
@@ -115,6 +129,7 @@
 				E6BA2777253AC86500502F55 /* Info.plist */,
 				E6BA277D253AC9D000502F55 /* SceneDelegate.swift */,
 				E6F7E128253B04900019E405 /* Session.swift */,
+				E6372AB5253B1F930092CEE9 /* rewards.json */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -124,6 +139,7 @@
 			children = (
 				E6F7E124253AFA6E0019E405 /* LoginModel.swift */,
 				E6F7E12A253B06CE0019E405 /* User.swift */,
+				E6372AB3253B1E6F0092CEE9 /* RewardsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,6 +147,7 @@
 		E6BA2780253ACAFC00502F55 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E6F7E12C253B12470019E405 /* RewardCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,7 +158,7 @@
 				E6BA2783253AD98900502F55 /* RootViewController.swift */,
 				E6BA2785253ADB1000502F55 /* LoginViewController.swift */,
 				E6BA2787253ADB2300502F55 /* RegisterViewController.swift */,
-				E6BA278B253ADD9300502F55 /* HomeViewController.swift */,
+				E6BA278B253ADD9300502F55 /* DashboardViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -160,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				E6BA2790253AE64A00502F55 /* String+Validations.swift */,
+				E6372AB7253B25730092CEE9 /* ImageView+Downloader.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -168,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				E6F7E11F253AF4350019E405 /* AccountViewModel.swift */,
+				E6372AAF253B1BB90092CEE9 /* DashboardViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -176,8 +195,18 @@
 			isa = PBXGroup;
 			children = (
 				E6F7E122253AF8750019E405 /* AccountApiService.swift */,
+				E6372AB1253B1D950092CEE9 /* RewardsApiService.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		E6F7E12C253B12470019E405 /* RewardCell */ = {
+			isa = PBXGroup;
+			children = (
+				E6372AAB253B19AF0092CEE9 /* RewardCell.swift */,
+				E6372AAC253B19AF0092CEE9 /* RewardCell.xib */,
+			);
+			path = RewardCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +269,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6372AAE253B19AF0092CEE9 /* RewardCell.xib in Resources */,
+				E6372AB6253B1F930092CEE9 /* rewards.json in Resources */,
 				E6BA2776253AC86500502F55 /* LaunchScreen.storyboard in Resources */,
 				E6BA2773253AC86500502F55 /* Assets.xcassets in Resources */,
 				E6BA2771253AC86400502F55 /* Main.storyboard in Resources */,
@@ -296,16 +327,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6BA2786253ADB1000502F55 /* LoginViewController.swift in Sources */,
+				E6372AB8253B25730092CEE9 /* ImageView+Downloader.swift in Sources */,
 				E6F7E125253AFA6E0019E405 /* LoginModel.swift in Sources */,
 				E6BA2788253ADB2300502F55 /* RegisterViewController.swift in Sources */,
+				E6372AB2253B1D950092CEE9 /* RewardsApiService.swift in Sources */,
 				E6BA276A253AC86400502F55 /* AppDelegate.swift in Sources */,
+				E6372AAD253B19AF0092CEE9 /* RewardCell.swift in Sources */,
 				E6BA2784253AD98900502F55 /* RootViewController.swift in Sources */,
 				E6BA277E253AC9D000502F55 /* SceneDelegate.swift in Sources */,
+				E6372AB0253B1BB90092CEE9 /* DashboardViewModel.swift in Sources */,
 				E6F7E12B253B06CE0019E405 /* User.swift in Sources */,
-				E6BA278C253ADD9300502F55 /* HomeViewController.swift in Sources */,
+				E6BA278C253ADD9300502F55 /* DashboardViewController.swift in Sources */,
 				E6F7E129253B04900019E405 /* Session.swift in Sources */,
 				E6F7E123253AF8750019E405 /* AccountApiService.swift in Sources */,
 				E6BA278A253ADCD400502F55 /* Constants.swift in Sources */,
+				E6372AB4253B1E6F0092CEE9 /* RewardsModel.swift in Sources */,
 				E6F7E11D253AF1C20019E405 /* Prompt.swift in Sources */,
 				E6F7E120253AF4350019E405 /* AccountViewModel.swift in Sources */,
 				E6BA2791253AE64A00502F55 /* String+Validations.swift in Sources */,
