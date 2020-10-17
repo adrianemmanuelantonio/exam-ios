@@ -58,22 +58,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginBtnAction(_ sender: UIButton) {
         guard let mobileNumber = mobileNumberTxt.text, !mobileNumber.trimmingCharacters(in: .whitespaces).isEmpty else {
-            print("Mobile Number is required")
+            Prompt.show(controller: self, message: "Mobile Number is required")
             return
         }
         
         if !mobileNumber.isValidMobileNumber {
-            print("Invalid Mobile Number should be 09XXXXXXXXX")
+            Prompt.show(controller: self, message: "Invalid Mobile Number should be 09XXXXXXXXX")
             return
         }
         
         guard let mPin = pinTxt.text, !mPin.trimmingCharacters(in: .whitespaces).isEmpty else {
-            print("MPIN is required")
+            Prompt.show(controller: self, message: "MPIN is required")
             return
         }
         
         if mPin.count != Constants.Validations.mpinLength {
-            print("MPIN should be 4 characters")
+            Prompt.show(controller: self, message: "MPIN should be 4 characters")
             return
         }
         

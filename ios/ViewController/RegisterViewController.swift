@@ -63,42 +63,42 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func registerBtnAction(_ sender: UIButton) {
         guard let firstName = firstNameTxt.text, !firstName.trimmingCharacters(in: .whitespaces).isEmpty else {
-            print("First Name is required")
+            Prompt.show(controller: self, message: "First Name is required")
             return
         }
         
         guard let lastName = lastNameTxt.text, !lastName.trimmingCharacters(in: .whitespaces).isEmpty else {
-            print("Last Name is required")
+            Prompt.show(controller: self, message: "Last Name is required")
             return
         }
         
         guard let mobileNumber = mobileNumberTxt.text, !mobileNumber.trimmingCharacters(in: .whitespaces).isEmpty else {
-            print("Mobile Number is required")
+            Prompt.show(controller: self, message: "Mobile Number is required")
             return
         }
         
         if !mobileNumber.isValidMobileNumber {
-            print("Invalid Mobile Number should be 09XXXXXXXXX")
+            Prompt.show(controller: self, message: "Invalid Mobile Number should be 09XXXXXXXXX")
             return
         }
         
         guard let mPin = pinTxt.text, !mPin.trimmingCharacters(in: .whitespaces).isEmpty else {
-            print("MPIN is required")
+            Prompt.show(controller: self, message: "MPIN is required")
             return
         }
         
         if mPin.count != Constants.Validations.mpinLength {
-            print("MPIN should be 4 characters")
+            Prompt.show(controller: self, message: "MPIN should be 4 characters")
             return
         }
         
         guard let confirmMpin = confirmPinTxt.text, !confirmMpin.trimmingCharacters(in: .whitespaces).isEmpty else {
-            print("Confirm MPIN is required")
+            Prompt.show(controller: self, message: "Confirm MPIN is required")
             return
         }
         
         if mPin != confirmMpin {
-            print("MPIN do not match")
+            Prompt.show(controller: self, message: "MPIN do not match")
             return
         }
         
