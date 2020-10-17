@@ -86,7 +86,7 @@
                                     <constraint firstAttribute="height" constant="50" id="0b9-nI-N9y"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartQuotesType="no" textContentType="given-name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter last name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zEg-Ys-DV0">
                                 <rect key="frame" x="20" y="170" width="374" height="50"/>
@@ -94,7 +94,7 @@
                                     <constraint firstAttribute="height" constant="50" id="6Ob-Zk-Tfs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartQuotesType="no" textContentType="family-name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter mobile number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7KZ-iN-H25">
                                 <rect key="frame" x="20" y="240" width="374" height="50"/>
@@ -102,7 +102,7 @@
                                     <constraint firstAttribute="height" constant="50" id="dtA-dN-6kD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="phonePad" smartQuotesType="no" textContentType="tel"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter MPIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5V-XK-9MT">
                                 <rect key="frame" x="20" y="310" width="374" height="50"/>
@@ -110,7 +110,7 @@
                                     <constraint firstAttribute="height" constant="50" id="8O9-SX-TRs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartQuotesType="no"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="A0K-EU-eSq">
                                 <rect key="frame" x="20" y="753" width="374" height="55"/>
@@ -156,7 +156,7 @@
                                     <constraint firstAttribute="height" constant="50" id="jb6-PA-LB8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartQuotesType="no"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -187,6 +187,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="Wa2-E1-J9N"/>
                     <connections>
+                        <outlet property="confirmPinTxt" destination="Bo2-Yt-BPb" id="MEr-Pk-CJz"/>
+                        <outlet property="firstNameTxt" destination="az5-YB-iX6" id="NSY-jG-Rqb"/>
+                        <outlet property="lastNameTxt" destination="zEg-Ys-DV0" id="4DV-E8-v6Q"/>
+                        <outlet property="mobileNumberTxt" destination="7KZ-iN-H25" id="zgc-wa-nr2"/>
+                        <outlet property="pinTxt" destination="a5V-XK-9MT" id="L6Z-vY-9Uz"/>
                         <segue destination="op5-ok-6GN" kind="show" identifier="segueHome" id="xh2-Ot-Wv1"/>
                     </connections>
                 </viewController>
@@ -214,7 +219,7 @@
                                     <constraint firstAttribute="height" constant="50" id="7Hu-cI-bp9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter MPIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lLo-Up-792">
                                 <rect key="frame" x="20" y="205" width="374" height="50"/>
@@ -222,7 +227,7 @@
                                     <constraint firstAttribute="height" constant="50" id="ewC-1z-5Ej"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="DyY-2c-d5m">
                                 <rect key="frame" x="20" y="723" width="374" height="55"/>
@@ -282,6 +287,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="Khj-c8-W8H"/>
                     <connections>
+                        <outlet property="mobileNumberTxt" destination="kbN-mC-vfI" id="KU4-8o-0xz"/>
+                        <outlet property="pinTxt" destination="lLo-Up-792" id="w9v-lH-6Nb"/>
                         <segue destination="op5-ok-6GN" kind="show" identifier="segueHome" id="g74-Gh-l2P"/>
                     </connections>
                 </viewController>
@@ -365,6 +372,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="g74-Gh-l2P"/>
+        <segue reference="xh2-Ot-Wv1"/>
     </inferredMetricsTieBreakers>
 </document>

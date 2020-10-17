@@ -17,6 +17,7 @@
 		E6BA2788253ADB2300502F55 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA2787253ADB2300502F55 /* RegisterViewController.swift */; };
 		E6BA278A253ADCD400502F55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA2789253ADCD400502F55 /* Constants.swift */; };
 		E6BA278C253ADD9300502F55 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA278B253ADD9300502F55 /* HomeViewController.swift */; };
+		E6BA2791253AE64A00502F55 /* String+Validations.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA2790253AE64A00502F55 /* String+Validations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E6BA2787253ADB2300502F55 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E6BA2789253ADCD400502F55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E6BA278B253ADD9300502F55 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E6BA2790253AE64A00502F55 /* String+Validations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Validations.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +108,18 @@
 		E6BA2782253ACB1500502F55 /* Utilitiies */ = {
 			isa = PBXGroup;
 			children = (
+				E6BA278F253AE63700502F55 /* Extensions */,
 				E6BA2789253ADCD400502F55 /* Constants.swift */,
 			);
 			path = Utilitiies;
+			sourceTree = "<group>";
+		};
+		E6BA278F253AE63700502F55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6BA2790253AE64A00502F55 /* String+Validations.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 				E6BA277E253AC9D000502F55 /* SceneDelegate.swift in Sources */,
 				E6BA278C253ADD9300502F55 /* HomeViewController.swift in Sources */,
 				E6BA278A253ADCD400502F55 /* Constants.swift in Sources */,
+				E6BA2791253AE64A00502F55 /* String+Validations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
