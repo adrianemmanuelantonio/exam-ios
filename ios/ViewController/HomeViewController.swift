@@ -2,18 +2,24 @@
 //  HomeViewController.swift
 //  ios
 //
-//  Created by MBAS on 10/17/20.
+//  Created by Adrian on 10/17/20.
 //  Copyright © 2020 Adrian Antonio. All rights reserved.
 //
 
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    private var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let user = Session.shared.getLoggedInUser() {
+            self.user = user
+        }
+        
+        print(user.firstName)
     }
 
 }

@@ -15,10 +15,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     private let MOBILE_NUMBER_TAG = 0
     private let MPIN_TAG = 1
     
+    let loginViewModel = AccountViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setupFieldDelegates()
+        self.setupViewModelObserver()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,6 +33,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.mobileNumberTxt.tag = MOBILE_NUMBER_TAG
         self.pinTxt.delegate = self
         self.pinTxt.tag = MPIN_TAG
+    }
+    
+    private func setupViewModelObserver() {
+        self.loginViewModel.apiResponse = { (message, response) in
+            if let user = response {
+                Session.shared.setLoggedInUser(user: user)
+                self.performSegue(withIdentifier: Constants.SegueIdentifiers.segueHome, sender: nil)
+            } else {
+                Prompt.show(controller: self, message: message)
+            }
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -77,7 +91,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        self.performSegue(withIdentifier: Constants.SegueIdentifiers.segueHome, sender: nil)
+        self.loginViewModel.login(mobileNumber: mobileNumber, mPin: mPin)
     }
     
     @IBAction func backBtnAction(_ sender: UIButton) {
