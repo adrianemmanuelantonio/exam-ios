@@ -18,10 +18,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     private let MOBILE_NUMBER_TAG = 0
     private let MPIN_TAG = 1
     
+    let viewModel = AccountViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setupFieldDelegates()
+        self.setupViewModelObserver()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,6 +38,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.pinTxt.tag = MPIN_TAG
         self.confirmPinTxt.delegate = self
         self.confirmPinTxt.tag = MPIN_TAG
+    }
+    
+    private func setupViewModelObserver() {
+        self.viewModel.registerSuccessResponse = { (message) in
+            Prompt.show(controller: self, message: message)
+        }
+        
+        self.viewModel.registerFailedResponse = { (message) in
+            Prompt.show(controller: self, message: message)
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -102,7 +115,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        self.performSegue(withIdentifier: Constants.SegueIdentifiers.segueHome, sender: nil)
+        viewModel.register(firstName: firstName, lastName: lastName, mobile: mobileNumber, mpin: mPin)
     }
     
     @IBAction func backBtnAction(_ sender: UIButton) {

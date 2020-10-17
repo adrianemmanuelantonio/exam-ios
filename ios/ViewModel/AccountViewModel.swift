@@ -14,6 +14,8 @@ protocol AccountViewModelProtocol {
 
 class AccountViewModel: AccountViewModelProtocol {
     var apiResponse: ((String, User?) -> Void)?
+    var registerSuccessResponse: ((String) -> Void)?
+    var registerFailedResponse: ((String) -> Void)?
     
     func login(mobileNumber: String, mPin: String) {
         guard let completion = apiResponse else {
@@ -38,6 +40,31 @@ class AccountViewModel: AccountViewModelProtocol {
             
             if let data = response.data {
                 completion(response.message, data.user)
+            }
+        }
+    }
+    
+    func register(firstName: String, lastName: String, mobile: String, mpin: String) {
+        guard let success = registerSuccessResponse else {
+            return
+        }
+        
+        guard let failed = registerFailedResponse else {
+            return
+        }
+        
+        let parameters: [String: String] = [
+            "first_name": firstName,
+            "last_name": lastName,
+            "mobile": mobile,
+            "mpin": mpin
+        ]
+        
+        AccountApiService.shared.register(parameters: parameters) { (status, message) in
+            if status == 200 {
+                success(message)
+            } else {
+                failed(message)
             }
         }
     }
