@@ -15,6 +15,7 @@
 		E6372AB4253B1E6F0092CEE9 /* RewardsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6372AB3253B1E6F0092CEE9 /* RewardsModel.swift */; };
 		E6372AB6253B1F930092CEE9 /* rewards.json in Resources */ = {isa = PBXBuildFile; fileRef = E6372AB5253B1F930092CEE9 /* rewards.json */; };
 		E6372AB8253B25730092CEE9 /* ImageView+Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6372AB7253B25730092CEE9 /* ImageView+Downloader.swift */; };
+		E6372ABA253B27680092CEE9 /* RewardDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6372AB9253B27680092CEE9 /* RewardDetailsViewController.swift */; };
 		E6BA276A253AC86400502F55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BA2769253AC86400502F55 /* AppDelegate.swift */; };
 		E6BA2771253AC86400502F55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6BA276F253AC86400502F55 /* Main.storyboard */; };
 		E6BA2773253AC86500502F55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6BA2772253AC86500502F55 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		E6372AB3253B1E6F0092CEE9 /* RewardsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardsModel.swift; sourceTree = "<group>"; };
 		E6372AB5253B1F930092CEE9 /* rewards.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rewards.json; sourceTree = "<group>"; };
 		E6372AB7253B25730092CEE9 /* ImageView+Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Downloader.swift"; sourceTree = "<group>"; };
+		E6372AB9253B27680092CEE9 /* RewardDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardDetailsViewController.swift; sourceTree = "<group>"; };
 		E6BA2766253AC86400502F55 /* ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BA2769253AC86400502F55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6BA2770253AC86400502F55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				E6BA2785253ADB1000502F55 /* LoginViewController.swift */,
 				E6BA2787253ADB2300502F55 /* RegisterViewController.swift */,
 				E6BA278B253ADD9300502F55 /* DashboardViewController.swift */,
+				E6372AB9253B27680092CEE9 /* RewardDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				E6BA2786253ADB1000502F55 /* LoginViewController.swift in Sources */,
 				E6372AB8253B25730092CEE9 /* ImageView+Downloader.swift in Sources */,
+				E6372ABA253B27680092CEE9 /* RewardDetailsViewController.swift in Sources */,
 				E6F7E125253AFA6E0019E405 /* LoginModel.swift in Sources */,
 				E6BA2788253ADB2300502F55 /* RegisterViewController.swift in Sources */,
 				E6372AB2253B1D950092CEE9 /* RewardsApiService.swift in Sources */,

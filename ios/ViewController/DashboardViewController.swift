@@ -18,6 +18,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     private var user: User!
     private var viewModel: DashboardViewModel?
+    private var selectedIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,15 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         setupViewModel()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        segue.destination.modalPresentationStyle = .fullScreen
+        if let destination = segue.destination as? RewardDetailsViewController {
+            if let reward = viewModel?.getReward(index: selectedIndex!) {
+                destination.selectedReward = reward
+            }
+        }
     }
     
     private func setupViewModel() {
@@ -90,6 +100,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        self.selectedIndex = indexPath.row
+        self.performSegue(withIdentifier: Constants.SegueIdentifiers.segueDetails, sender: nil)
     }
 }

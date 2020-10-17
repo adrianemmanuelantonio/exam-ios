@@ -2,7 +2,7 @@
 //  Constants.swift
 //  ios
 //
-//  Created by MBAS on 10/17/20.
+//  Created by Adrian on 10/17/20.
 //  Copyright © 2020 Adrian Antonio. All rights reserved.
 //
 
@@ -17,6 +17,7 @@ struct Constants {
         static let segueLogin = "segueLogin"
         static let segueRegister = "segueRegister"
         static let segueHome = "segueHome"
+        static let segueDetails = "segueDetails"
     }
     
     struct Validations {
