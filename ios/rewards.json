@@ -14,6 +14,114 @@
                 "name": "Zalora Free Delivery",
                 "description": "Free delivery on any order from Zalora.",
                 "image": "https://static-sg.zacdn.com/cms/zaloranow/ZNOW_FA_LOGOS_PRIMARY_BLACK.png"
+            },
+            {
+                "id": 3,
+                "name": "Reward # 3",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1600604537891-ed5913940f02?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 4,
+                "name": "Reward # 4",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1602196426211-ec5b665014dd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 5,
+                "name": "Reward # 5",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1600952587065-059e98350161?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 6,
+                "name": "Reward # 6",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1602350558623-39121549412c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 7,
+                "name": "Reward # 7",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1600366060302-9fb7682b062b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 8,
+                "name": "Reward # 8",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1602620228764-8afef96a9d9c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 9,
+                "name": "Reward # 9",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1601586764294-bc880272b659?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 10,
+                "name": "Reward # 10",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1602571816391-59607c7a8a4d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 11,
+                "name": "Reward # 11",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1601882761113-3db7631b0c7a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 12,
+                "name": "Reward # 12",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1600969968227-28a1dfa21455?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 13,
+                "name": "Reward # 13",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1601751818941-571144562ff8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 14,
+                "name": "Reward # 14",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1600619754865-8fe927da0701?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 15,
+                "name": "Reward # 15",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1602548205443-4c878d2f44b5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 16,
+                "name": "Reward # 16",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1600633660236-f6f61d5f155d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 17,
+                "name": "Reward # 17",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1602826339507-9948c5630f03?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 18,
+                "name": "Reward # 18",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1600876266943-17a581d54b61?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 19,
+                "name": "Reward # 19",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1601232362955-7de5c6df8018?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
+            },
+            {
+                "id": 20,
+                "name": "Reward # 20",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                "image": "https://images.unsplash.com/photo-1601433131129-93b3e8e4cedf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=360&fit=max"
             }
         ]
     }

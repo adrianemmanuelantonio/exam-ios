@@ -14,6 +14,7 @@ class RewardCell: UITableViewCell {
     
     public func setupDetails(reward: Reward) {
         self.rewardNameTxt.text = reward.name
+        self.rewardImage.image = nil
         self.rewardImage.download(from: reward.image)
     }
 
