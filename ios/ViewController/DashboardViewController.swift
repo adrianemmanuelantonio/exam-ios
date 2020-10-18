@@ -9,7 +9,6 @@
 import UIKit
 
 class DashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
     @IBOutlet weak var nameTxt: UILabel!
     @IBOutlet weak var mobileTxt: UILabel!
     @IBOutlet weak var codeTxt: UILabel!
@@ -101,6 +100,6 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.selectedIndex = indexPath.row
-        self.performSegue(withIdentifier: Constants.SegueIdentifiers.segueDetails, sender: nil)
+        self.performSegue(withIdentifier: Constants.SegueIdentifiers.SegueDetails, sender: nil)
     }
 }

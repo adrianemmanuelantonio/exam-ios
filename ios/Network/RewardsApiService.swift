@@ -10,11 +10,13 @@ import Foundation
 
 public class RewardsApiService {
     public static let shared = RewardsApiService()
+    private static let fileName = "rewards"
+    private static let fileExtension = "json"
     
     public func requestRewards(completion: @escaping ([Reward]?) -> ()) {
         // TODO: Transfer to api request when api is given
         // Please refer to rewards.json file in the root of project
-        let filePath = Bundle.main.url(forResource: "rewards", withExtension: "json")
+        let filePath = Bundle.main.url(forResource: RewardsApiService.fileName, withExtension: RewardsApiService.fileExtension)
         let originalContents = try? Data(contentsOf: filePath!)
         
         if let rewards = try? JSONDecoder().decode(RewardsModel.self, from: originalContents!) {

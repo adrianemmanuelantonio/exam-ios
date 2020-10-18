@@ -60,7 +60,7 @@ public class AccountApiService {
         if let loginResponse = try? JSONDecoder().decode(LoginModel.self, from: jsonData!) {
             completion(loginResponse.status, loginResponse.message)
         } else {
-            completion(500, "Failed to register")
+            completion(Constants.ApiCodes.ServerError, "Failed to register")
         }
     }
     

@@ -34,7 +34,7 @@ class AccountViewModel: AccountViewModelProtocol {
                 return
             }
             
-            if response.status != 200 {
+            if response.status != Constants.ApiCodes.Success {
                 completion(response.message, nil)
                 return
             }
@@ -62,7 +62,7 @@ class AccountViewModel: AccountViewModelProtocol {
         ]
         
         AccountApiService.shared.register(parameters: parameters) { (status, message) in
-            if status == 200 {
+            if status == Constants.ApiCodes.Success {
                 success(message)
             } else {
                 failed(message)

@@ -13,9 +13,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var pinTxt: UITextField!
     @IBOutlet weak var toggleBtn: UIButton!
     
-    private let MOBILE_NUMBER_TAG = 0
-    private let MPIN_TAG = 1
-    
     let viewModel = AccountViewModel()
     
     override func viewDidLoad() {
@@ -31,9 +28,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     private func setupFieldDelegates() {
         self.mobileNumberTxt.delegate = self
-        self.mobileNumberTxt.tag = MOBILE_NUMBER_TAG
+        self.mobileNumberTxt.tag = Constants.Tags.MobileNumberFieldTag
         self.pinTxt.delegate = self
-        self.pinTxt.tag = MPIN_TAG
+        self.pinTxt.tag = Constants.Tags.MPINFieldTag
     }
     
     private func setupViewModelObserver() {
@@ -48,7 +45,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.viewModel.getProfileResponse = { (response, message) in
             if let profile = response {
                 Session.shared.setUserProfile(profile: profile)
-                self.performSegue(withIdentifier: Constants.SegueIdentifiers.segueHome, sender: nil)
+                self.performSegue(withIdentifier: Constants.SegueIdentifiers.SegueHome, sender: nil)
             } else {
                 Prompt.show(controller: self, message: message)
             }
@@ -65,12 +62,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
         switch textField.tag {
-        case MOBILE_NUMBER_TAG:
-            if targetTextfieldCount >= Constants.Validations.mobileNumberLength {
+        case Constants.Tags.MobileNumberFieldTag:
+            if targetTextfieldCount >= Constants.Validations.MobileNumberLength {
                 return false
             }
-        case MPIN_TAG:
-            if targetTextfieldCount >= Constants.Validations.mpinLength {
+        case Constants.Tags.MPINFieldTag:
+            if targetTextfieldCount >= Constants.Validations.MPINLength {
                 return false
             }
         default:
@@ -95,7 +92,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if mPin.count != Constants.Validations.mpinLength {
+        if mPin.count != Constants.Validations.MPINLength {
             Prompt.show(controller: self, message: "MPIN should be 4 characters")
             return
         }

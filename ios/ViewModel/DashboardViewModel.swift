@@ -42,14 +42,12 @@ class DashboardViewModel: DashboardViewModelProtocol {
             if let rewards = response {
                 self.rewards = rewards
                 completion()
-            } else {
-                print("No rewards")
             }
         }
     }
     
     public func getRewardsCount() -> Int {
-        return rewards?.count ?? 0
+        return rewards?.count ?? Constants.Generic.Zero
     }
     
     public func getReward(index: Int) -> Reward? {

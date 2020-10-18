@@ -10,18 +10,29 @@ import Foundation
 
 struct Constants {
     struct Generic {
+        static let Zero = 0
         static let One = 1
     }
     
     struct SegueIdentifiers {
-        static let segueLogin = "segueLogin"
-        static let segueRegister = "segueRegister"
-        static let segueHome = "segueHome"
-        static let segueDetails = "segueDetails"
+        static let SegueLogin = "segueLogin"
+        static let SegueRegister = "segueRegister"
+        static let SegueHome = "segueHome"
+        static let SegueDetails = "segueDetails"
     }
     
     struct Validations {
-        static let mobileNumberLength = 11
-        static let mpinLength = 4
+        static let MobileNumberLength = 11
+        static let MPINLength = 4
+    }
+    
+    struct Tags {
+        static let MobileNumberFieldTag = 0
+        static let MPINFieldTag = 1
+    }
+    
+    struct ApiCodes {
+        static let Success = 200
+        static let ServerError = 500
     }
 }
