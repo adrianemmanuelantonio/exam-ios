@@ -42,11 +42,26 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     private func setupViewModelObserver() {
         self.viewModel.registerSuccessResponse = { (message) in
-            Prompt.show(controller: self, message: message)
+            self.requestProfile()
         }
         
         self.viewModel.registerFailedResponse = { (message) in
             Prompt.show(controller: self, message: message)
+        }
+        
+        self.viewModel.getProfileResponse = { (response, message) in
+            if let profile = response {
+                Session.shared.setUserProfile(profile: profile)
+                self.performSegue(withIdentifier: Constants.SegueIdentifiers.segueHome, sender: nil)
+            } else {
+                Prompt.show(controller: self, message: message)
+            }
+        }
+    }
+    
+    private func requestProfile() {
+        if let mobileNumber = self.mobileNumberTxt.text?.trimmingCharacters(in: .whitespaces) {
+            self.viewModel.getProfile(mobileNumber: mobileNumber)
         }
     }
     
