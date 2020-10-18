@@ -14,23 +14,23 @@ protocol DashboardViewModelProtocol {
 
 class DashboardViewModel: DashboardViewModelProtocol {
     var rewardsReceived: (() -> Void)?
-    var user: User!
+    var profile: Profile!
     var rewards: [Reward]?
     
-    init(user: User) {
-        self.user = user
+    init(profile: Profile) {
+        self.profile = profile
     }
     
     public func getName() -> String {
-        return "\(user.firstName) \(user.lastName)"
+        return "\(profile.firstName) \(profile.lastName)"
     }
     
     public func getMobileNumber() -> String  {
-        return user.mobile
+        return profile.mobile
     }
     
     public func getReferralCode() -> String {
-        return "TODO:CODE"
+        return profile.referral_code
     }
     
     public func requestRewards() {

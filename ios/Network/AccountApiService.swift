@@ -63,4 +63,30 @@ public class AccountApiService {
             completion(500, "Failed to register")
         }
     }
+    
+    public func getProfile(parameters: [String: String], completion: @escaping (Profile?, String) -> ()) {
+        // TODO: Replace this sample json response once api is finished
+        let successfulJsonResponse = "{" +
+            "\"status\": 200," +
+            "\"message\": \"Successfully logged in.\"," +
+            "\"data\": {" +
+                "\"user\": {" +
+                    "\"id\": \"123-456-789-abc-def\"," +
+                    "\"first_name\": \"John\"," +
+                    "\"last_name\": \"Doe\"," +
+                    "\"mobile\": \"9123456789\"," +
+                    "\"is_verified\": true," +
+                    "\"referral_code\": \"asd456\"" +
+                "}" +
+            "}" +
+        "}"
+
+        // Toggle the appropriate hardcoded json string for now
+        let jsonData = successfulJsonResponse.data(using: .utf8)
+        if let profileResponse = try? JSONDecoder().decode(ProfileModel.self, from: jsonData!) {
+            completion(profileResponse.data?.user, profileResponse.message)
+        } else {
+            completion(nil, "Failed to get data")
+        }
+    }
 }

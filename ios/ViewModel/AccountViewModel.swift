@@ -16,6 +16,7 @@ class AccountViewModel: AccountViewModelProtocol {
     var apiResponse: ((String, User?) -> Void)?
     var registerSuccessResponse: ((String) -> Void)?
     var registerFailedResponse: ((String) -> Void)?
+    var getProfileResponse: ((Profile?, String) -> Void)?
     
     func login(mobileNumber: String, mPin: String) {
         guard let completion = apiResponse else {
@@ -66,6 +67,25 @@ class AccountViewModel: AccountViewModelProtocol {
             } else {
                 failed(message)
             }
+        }
+    }
+    
+    func getProfile(mobileNumber: String) {
+        guard let completion = getProfileResponse else {
+            return
+        }
+        
+        let parameters: [String: String] = [
+            "mobile": mobileNumber
+        ]
+        
+        AccountApiService.shared.getProfile(parameters: parameters) { (response, message) in
+            guard let profile = response else {
+                completion(nil, message)
+                return
+            }
+            
+            completion(profile, message)
         }
     }
 }

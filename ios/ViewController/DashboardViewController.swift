@@ -16,7 +16,7 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var user: User!
+    private var profile: Profile!
     private var viewModel: DashboardViewModel?
     private var selectedIndex: Int?
 
@@ -38,8 +38,8 @@ class DashboardViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     private func setupViewModel() {
-        if let user = Session.shared.getLoggedInUser() {
-            viewModel = DashboardViewModel(user: user)
+        if let profile = Session.shared.getUserProfile() {
+            viewModel = DashboardViewModel(profile: profile)
             setupDetails()
             setupObservers()
             requestRewards()

@@ -15,7 +15,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     private let MOBILE_NUMBER_TAG = 0
     private let MPIN_TAG = 1
     
-    let loginViewModel = AccountViewModel()
+    let viewModel = AccountViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +36,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     private func setupViewModelObserver() {
-        self.loginViewModel.apiResponse = { (message, response) in
+        self.viewModel.apiResponse = { (message, response) in
             if let user = response {
-                Session.shared.setLoggedInUser(user: user)
+                self.viewModel.getProfile(mobileNumber: user.mobile)
+            } else {
+                Prompt.show(controller: self, message: message)
+            }
+        }
+        
+        self.viewModel.getProfileResponse = { (response, message) in
+            if let profile = response {
+                Session.shared.setUserProfile(profile: profile)
                 self.performSegue(withIdentifier: Constants.SegueIdentifiers.segueHome, sender: nil)
             } else {
                 Prompt.show(controller: self, message: message)
@@ -91,7 +99,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        self.loginViewModel.login(mobileNumber: mobileNumber, mPin: mPin)
+        self.viewModel.login(mobileNumber: mobileNumber, mPin: mPin)
     }
     
     @IBAction func backBtnAction(_ sender: UIButton) {

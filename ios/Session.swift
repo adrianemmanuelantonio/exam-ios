@@ -11,13 +11,13 @@ import Foundation
 public struct Session {
     static var shared = Session()
     
-    var user: User?
+    var profile: Profile?
     
-    public mutating func setLoggedInUser(user: User) {
-        self.user = user
+    public mutating func setUserProfile(profile: Profile) {
+        self.profile = profile
     }
     
-    public func getLoggedInUser() -> User? {
-        return self.user ?? nil
+    public func getUserProfile() -> Profile? {
+        return self.profile ?? nil
     }
 }
