@@ -11,6 +11,7 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var mobileNumberTxt: UITextField!
     @IBOutlet weak var pinTxt: UITextField!
+    @IBOutlet weak var toggleBtn: UIButton!
     
     private let MOBILE_NUMBER_TAG = 0
     private let MPIN_TAG = 1
@@ -105,4 +106,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func backBtnAction(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func toggleBtnAction(_ sender: UIButton) {
+        pinTxt.isSecureTextEntry = !pinTxt.isSecureTextEntry
+        toggleBtn.setTitle((pinTxt.isSecureTextEntry ? "Show" : "Hide"), for: .normal)
+    }
+    
 }

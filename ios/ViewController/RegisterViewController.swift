@@ -13,7 +13,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lastNameTxt: UITextField!
     @IBOutlet weak var mobileNumberTxt: UITextField!
     @IBOutlet weak var pinTxt: UITextField!
+    @IBOutlet weak var pinToggleBtn: UIButton!
     @IBOutlet weak var confirmPinTxt: UITextField!
+    @IBOutlet weak var confirmPinToggleBtn: UIButton!
     
     private let MOBILE_NUMBER_TAG = 0
     private let MPIN_TAG = 1
@@ -135,5 +137,15 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func backBtnAction(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func pinToggleAction(_ sender: UIButton) {
+        pinTxt.isSecureTextEntry = !pinTxt.isSecureTextEntry
+        pinToggleBtn.setTitle((pinTxt.isSecureTextEntry ? "Show" : "Hide"), for: .normal)
+    }
+    
+    @IBAction func confirmPinToggleAction(_ sender: Any) {
+        confirmPinTxt.isSecureTextEntry = !confirmPinTxt.isSecureTextEntry
+        confirmPinToggleBtn.setTitle((confirmPinTxt.isSecureTextEntry ? "Show" : "Hide"), for: .normal)
     }
 }
